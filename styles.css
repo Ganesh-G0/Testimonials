@@ -20,25 +20,25 @@
   width: 35px;
 }
 section {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.6rem;
 }
-section > div > div > h1,
-section > h1 {
+section > div > div > h3,
+section > h3 {
   font-size: 1.2rem;
   font-weight: bold;
   padding: .6rem 0;
 }
-section > div > div > h3 {
+section > div > div > h1 {
   font-size: 0.9rem;
   font-weight: 500;
 }
-section > div > div > h4 {
+section > div > div > h2 {
   font-size: 0.8rem;
   color: var(--opaque-h4);
 }
 section > p {
-  font-size: 0.8rem;
+  font-size: .85rem;
   color: var(--opaque-p);
   font-weight: normal;
 }
@@ -56,3 +56,5 @@ section > p {
     height: 100%;
   }
 }
+
+
