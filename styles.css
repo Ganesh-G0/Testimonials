@@ -16,6 +16,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: var(--lightGrayishBlue);    
+}
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'one'
+    'two'
+    'three'
+    'four'
+    'five';
+
+    padding-block: 1rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+.testimonial:nth-child(1) { grid-area: one;}
+.testimonial:nth-child(2) { grid-area: two;}
+.testimonial:nth-child(3) { grid-area: three;}
+.testimonial:nth-child(4) { grid-area: four;}
+.testimonial:nth-child(5) { grid-area: five;}
+@media (min-width: 768px) {
+    .testimonial-grid {
+        grid-template-areas: 
+        'one one two five'
+        'three four four five'
+        ;
+    }
+}
+.quotes {
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 5% right 15%;
+}
 .profile {
   width: 35px;
 }
@@ -23,21 +59,20 @@ section {
   padding: 1rem;
   border-radius: 0.6rem;
 }
-section > div > div > h3,
-section > h3 {
-  font-size: 1.2rem;
+.h1 {
+  font-size: 1.3rem;
   font-weight: bold;
-  padding: .6rem 0;
+  padding: .6rem;
 }
-section > div > div > h1 {
-  font-size: 0.9rem;
+.h2 {
+  font-size: .9rem;
   font-weight: 500;
 }
-section > div > div > h2 {
+.h4 {
   font-size: 0.8rem;
   color: var(--opaque-h4);
 }
-section > p {
+.p {
   font-size: .85rem;
   color: var(--opaque-p);
   font-weight: normal;
@@ -49,12 +84,6 @@ section > p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-@media (min-width: 1024px) {
-  .dan, .jon, .jen, .pat, .kir {
-    height: 100%;
-  }
 }
 
 
